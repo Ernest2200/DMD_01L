@@ -118,3 +118,53 @@ INSERT INTO Libro VALUES
 ('LB05','SQL Server 2008','789-255-487','Administracion de base de datos','150 paginas','2008','ED03'),
 ('LB06','CSS y HTML','652-414-111','Creacion de paginas web y hojas de estilo','350 paginas','2007','ED01')
 
+ 
+-- II) Crear las siguientes consultas SQL: 
+
+--a.Se desea mostrar los datos de los autores junto con los títulos de libros que han escrito.
+--Ordenarlos en forma descendente por el nombre del autor.
+
+SELECT a.Codigo,a.Nombres,a.Apellidos,a.Nacionalidad,al.Cod_libro,l.Titulo
+FROM Autor a
+INNER JOIN Autor_Libro al ON a.Codigo = al.Cod_autor
+INNER JOIN Libro l ON l.Codigo = al.Cod_libro
+
+--b. Se desea conocer todos los autores que tienen libros que han sido publicados por la
+--editorial 'Omega'.
+SELECT a.Codigo,a.Nombres,a.Apellidos,a.Nacionalidad,al.Cod_libro,l.Titulo,l.Cod_editorial
+FROM Autor a
+INNER JOIN Autor_Libro al ON a.Codigo = al.Cod_autor
+INNER JOIN Libro l ON l.Codigo = al.Cod_libro
+Where l.Cod_editorial = 'ED02'
+
+--c. Mostrar cuántos ejemplares hay por cada libro. Titulo, ejemplar
+select l.Titulo,COUNT(e.Cod_libro) as ' # Ejemplares'
+from Libro l
+inner join Ejemplar e on l.Codigo =e.Cod_libro
+group by l.Titulo
+--d. Mostrar los títulos de los libros donde el estado sea Prestado.
+
+SELECT l.Titulo,e.Estado
+FROM Libro l
+INNER JOIN Ejemplar e
+ON l.Codigo = e.Cod_libro
+Where e.Estado = 'Prestado'
+
+--e. Se desea mostrar los libros que se han editados entre el 2000 y 2007. Ordenarlos en
+--forma ascendente
+SELECT *
+FROM Libro
+WHERE Año_edicion BETWEEN '2000' AND '2007'
+order by Año_edicion asc
+
+--f. Mostrar cuántos libros que se han prestado y agruparlos por el estante
+select e.Ubicacion,COUNT(e.Cod_libro) as 'Ejemplares'
+from Libro l
+inner join Ejemplar e on l.Codigo =e.Cod_libro
+where e.Estado='Prestado'
+group by e.Ubicacion
+union all
+SELECT '# libros prestados' name, COUNT(Cod_libro) FROM ejemplar
+where Estado='Prestado'
+
+
