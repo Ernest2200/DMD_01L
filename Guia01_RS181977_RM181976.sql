@@ -167,4 +167,28 @@ union all
 SELECT '# libros prestados' name, COUNT(Cod_libro) FROM ejemplar
 where Estado='Prestado'
 
+--Parte 3
+
+CREATE TABLE Autores_espana(
+Codigo varchar(4) NOT NULL,
+Nombres VARCHAR(20) NOT NULL,
+Apellidos VARCHAR(20) NOT NULL,
+--Restricciones
+CONSTRAINT PK_Autor_espana PRIMARY KEY(Codigo)
+)
+
+INSERT INTO Autores_espana
+SELECT Codigo,Nombres,Apellidos FROM Autor
+WHERE Nacionalidad='ESPAÑOLA';
+
+CREATE VIEW copia_libro
+AS
+SELECT TOP 100 PERCENT c.isbn AS 'identificador', c.copy_no as 'Numero de copias', c.on_loan as 'Disponible',t.title as 'Titulo',i.translation as 'idioma',i.cover as 'Portada'
+FROM copy as c
+JOIN item as i
+ON i.isbn = c.isbn
+JOIN title as t
+ON t.title_no = c.title_no
+where c.isbn in (1,500,1000)
+order by c.isbn asc
 
