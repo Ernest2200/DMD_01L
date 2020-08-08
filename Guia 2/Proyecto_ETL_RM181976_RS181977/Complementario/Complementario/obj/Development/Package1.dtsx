@@ -1,0 +1,1229 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/7/2020 8:37:31 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-OOEURSU"
+  DTS:CreatorName="DESKTOP-OOEURSU\carlo"
+  DTS:DTSID="{E696F596-D710-4422-9B4A-27952045ADA8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LocaleID="21514"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{3897F7E5-FB3F-489E-A17D-B8131C2D10E6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{921C79B7-9177-4A9D-B4E3-4F6F5C997AF3}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\carlo\Desktop\Proyecto_ETL_RM181976_RS181977\Complementario\excel\Vendedor.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{6B8EC827-15D9-49A1-A0BE-D7A96D7E53A7}"
+      DTS:ObjectName="Administrador de conexiones con Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\carlo\Desktop\Proyecto_ETL_RM181976_RS181977\Complementario\excel\Venta.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Complementario_ejercicio]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{57664774-3CE4-4C7B-A372-DB925D598CB1}"
+      DTS:ObjectName="localhost.Complementario_ejercicio">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Complementario_ejercicio;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0C41CC62-CBB3-4C96-BF43-72F829F16859}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Conversión datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Conversión datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[id_producto ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id_producto "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_producto ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[id_lugar_compra ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id_lugar_compra "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_lugar_compra ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[id_sector_venta ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id_sector_venta "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_sector_venta ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[id_vendedor ]"
+                      cachedDataType="r8"
+                      cachedName="id_vendedor "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_vendedor ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[id_fecha ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id_fecha "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_fecha ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[num_nota_venta]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="num_nota_venta"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[num_nota_venta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[not_cod_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="not_cod_cd"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[not_cod_cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[MontoVenta]"
+                      cachedDataType="r8"
+                      cachedName="MontoVenta"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[MontoVenta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[MontoCosto ]"
+                      cachedDataType="r8"
+                      cachedName="MontoCosto "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[MontoCosto ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[Ganancia ]"
+                      cachedDataType="r8"
+                      cachedName="Ganancia "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Ganancia ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[Utilidades ]"
+                      cachedDataType="r8"
+                      cachedName="Utilidades "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Utilidades ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[Volumen ]"
+                      cachedDataType="r8"
+                      cachedName="Volumen "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Volumen ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input].Columns[Kilos ]"
+                      cachedDataType="r8"
+                      cachedName="Kilos "
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Kilos ]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_producto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_producto]"
+                      name="Copia de id_producto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_producto ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_lugar_compra]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_lugar_compra]"
+                      name="Copia de id_lugar_compra"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_lugar_compra ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_sector_venta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_sector_venta]"
+                      name="Copia de id_sector_venta"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_sector_venta ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_vendedor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_vendedor]"
+                      name="Copia de id_vendedor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_vendedor ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_fecha]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_fecha]"
+                      name="Copia de id_fecha"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_fecha ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de num_nota_venta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de num_nota_venta]"
+                      name="Copia de num_nota_venta"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[num_nota_venta]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de not_cod_cd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de not_cod_cd]"
+                      name="Copia de not_cod_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[not_cod_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de MontoVenta]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de MontoVenta]"
+                      name="Copia de MontoVenta"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[MontoVenta]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de MontoCosto]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de MontoCosto]"
+                      name="Copia de MontoCosto"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[MontoCosto ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Ganancia]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Ganancia]"
+                      name="Copia de Ganancia"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Ganancia ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Utilidades]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Utilidades]"
+                      name="Copia de Utilidades"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Utilidades ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Volumen]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Volumen]"
+                      name="Copia de Volumen"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Volumen ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Kilos]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Kilos]"
+                      name="Copia de Kilos"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Kilos ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Excel Ventas"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Ventas"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Worksheet$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Excel Ventas.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_producto ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_producto ]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_producto ]"
+                      name="id_producto "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_lugar_compra ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_lugar_compra ]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_lugar_compra ]"
+                      name="id_lugar_compra "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_sector_venta ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_sector_venta ]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_sector_venta ]"
+                      name="id_sector_venta "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_vendedor ]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_vendedor ]"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_vendedor ]"
+                      name="id_vendedor "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_fecha ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_fecha ]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[id_fecha ]"
+                      name="id_fecha "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[num_nota_venta]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[num_nota_venta]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[num_nota_venta]"
+                      name="num_nota_venta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[not_cod_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[not_cod_cd]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[not_cod_cd]"
+                      name="not_cod_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[MontoVenta]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[MontoVenta]"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[MontoVenta]"
+                      name="MontoVenta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[MontoCosto ]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[MontoCosto ]"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[MontoCosto ]"
+                      name="MontoCosto "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Ganancia ]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[Ganancia ]"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Ganancia ]"
+                      name="Ganancia "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Utilidades ]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[Utilidades ]"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Utilidades ]"
+                      name="Utilidades "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Volumen ]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[Volumen ]"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Volumen ]"
+                      name="Volumen "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Kilos ]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[Kilos ]"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].Columns[Kilos ]"
+                      name="Kilos "
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_producto ]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_producto " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_lugar_compra ]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_lugar_compra " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_sector_venta ]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_sector_venta " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_vendedor ]"
+                      dataType="r8"
+                      name="id_vendedor " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[id_fecha ]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_fecha " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[num_nota_venta]"
+                      dataType="wstr"
+                      length="255"
+                      name="num_nota_venta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[not_cod_cd]"
+                      dataType="wstr"
+                      length="255"
+                      name="not_cod_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[MontoVenta]"
+                      dataType="r8"
+                      name="MontoVenta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[MontoCosto ]"
+                      dataType="r8"
+                      name="MontoCosto " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[Ganancia ]"
+                      dataType="r8"
+                      name="Ganancia " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[Utilidades ]"
+                      dataType="r8"
+                      name="Utilidades " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[Volumen ]"
+                      dataType="r8"
+                      name="Volumen " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output].ExternalColumns[Kilos ]"
+                      dataType="r8"
+                      name="Kilos " />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_producto ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_producto ]"
+                      name="id_producto " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_lugar_compra ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_lugar_compra ]"
+                      name="id_lugar_compra " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_sector_venta ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_sector_venta ]"
+                      name="id_sector_venta " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_vendedor ]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_vendedor ]"
+                      name="id_vendedor " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_fecha ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[id_fecha ]"
+                      name="id_fecha " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[num_nota_venta]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[num_nota_venta]"
+                      name="num_nota_venta" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[not_cod_cd]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[not_cod_cd]"
+                      name="not_cod_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[MontoVenta]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[MontoVenta]"
+                      name="MontoVenta" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[MontoCosto ]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[MontoCosto ]"
+                      name="MontoCosto " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[Ganancia ]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[Ganancia ]"
+                      name="Ganancia " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[Utilidades ]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[Utilidades ]"
+                      name="Utilidades " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[Volumen ]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[Volumen ]"
+                      name="Volumen " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[Kilos ]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[Kilos ]"
+                      name="Kilos " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Tabla ventas"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Tabla ventas"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Venta]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Tabla ventas.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Complementario_ejercicio]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Complementario_ejercicio]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de id_producto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Copia de id_producto"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_producto]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_producto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de id_lugar_compra]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copia de id_lugar_compra"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_lugar_compra]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_lugar_compra]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de id_sector_venta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copia de id_sector_venta"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_sector_venta]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_sector_venta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de id_vendedor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copia de id_vendedor"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_vendedor]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_vendedor]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de id_fecha]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copia de id_fecha"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_fecha]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de id_fecha]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de num_nota_venta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copia de num_nota_venta"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[num_nota_venta]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de num_nota_venta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de not_cod_cd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copia de not_cod_cd"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[not_cod_cd]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de not_cod_cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de MontoVenta]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de MontoVenta"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[MontoVenta]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de MontoVenta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de MontoCosto]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de MontoCosto"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[MontoCosto]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de MontoCosto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de Ganancia]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de Ganancia"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[Ganancia]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Ganancia]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de Utilidades]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de Utilidades"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[Utilidades]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Utilidades]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de Volumen]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de Volumen"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[Volumen]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Volumen]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].Columns[Copia de Kilos]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de Kilos"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[Kilos]"
+                      lineageId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output].Columns[Copia de Kilos]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_producto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="id_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_lugar_compra]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="id_lugar_compra" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_sector_venta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="id_sector_venta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_vendedor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="id_vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[id_fecha]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="id_fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[num_nota_venta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="num_nota_venta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[not_cod_cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="not_cod_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[MontoVenta]"
+                      dataType="numeric"
+                      name="MontoVenta"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[MontoCosto]"
+                      dataType="numeric"
+                      name="MontoCosto"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[Ganancia]"
+                      dataType="numeric"
+                      name="Ganancia"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[Utilidades]"
+                      dataType="numeric"
+                      name="Utilidades"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[Volumen]"
+                      dataType="numeric"
+                      name="Volumen"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input].ExternalColumns[Kilos]"
+                      dataType="numeric"
+                      name="Kilos"
+                      precision="8"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Tabla ventas.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Tabla ventas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tabla ventas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Tabla ventas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\Tabla ventas.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Conversión datos.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\Conversión datos.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Excel Ventas.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="151.428574007385,60.4117655531346" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Data Flow Task\Excel Ventas"
+          TopLeft="92.1428587120407,31.3529416161838" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Data Flow Task\Tabla ventas"
+          TopLeft="137.142859478386,233.235297388684" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Data Flow Task\Conversión datos"
+          TopLeft="127.142859308087,134.329413244716" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="160.942858712041,72.9529416161838">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45.8000005960464,61.3764716285323"
+              Start="0,0"
+              End="45.8000005960464,53.8764716285323">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.6882358142662" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.6882358142662"
+                    Point2="0,30.6882358142662"
+                    Point3="4,30.6882358142662" />
+                  <mssgle:LineSegment
+                    End="41.8000005960464,30.6882358142662" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.8000005960464,30.6882358142662"
+                    Point2="45.8000005960464,30.6882358142662"
+                    Point3="45.8000005960464,34.6882358142662" />
+                  <mssgle:LineSegment
+                    End="45.8000005960464,53.8764716285323" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="206.542859393237,175.929413244716">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.305884143968"
+              Start="0,0"
+              End="0,49.805884143968">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.805884143968" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Excel Ventas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Tabla ventas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
