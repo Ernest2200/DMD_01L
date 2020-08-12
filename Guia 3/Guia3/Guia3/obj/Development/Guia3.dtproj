@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-OOEURSU</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiYkbAxMSQEeIsjb0QtLJKAAAAAACAAAAAAAQZgAAAAEAACAAAADDhls72UWbwfrLwYxwi9UhznOT9VWlqPnFgSUSSAzk2QAAAAAOgAAAAAIAACAAAABHGQS6JOvm6E+5cqXYAWGgWcbuXIxC09qn+PIHaGm0HJAAAACdnG/ZcRNQm+ZY+DyudZTCoa0gpKfU8yOk/xy6GMHzj7cp3pTr9v28UnuQQwVatQe7Ds+BnkAprsi2dS9ZOhudOMpKI+enyO5IPiDYDdhdMN/1+YauSfi20YUPOrdYMzt0kpRyzhdVO1Q/tEIE8MIt3C7rThrC/PxMbxzLLV3Qh65QCClVQ1egGHaYY2JLmYpAAAAAIxwPFQdx2/ir4zICcDIFjmImEAv0K+win65wMxihqAXVv5N+FF29lfPoTY+kqqFG7P2DI+gxdWldCWaV+IW3BQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiYkbAxMSQEeIsjb0QtLJKAAAAAACAAAAAAAQZgAAAAEAACAAAABurzYUgx84rhMwZf+tmBzwkXVPbSxaLfxXJnaOxfBStwAAAAAOgAAAAAIAACAAAAA7FlWivII4yyf2/u0C8EQlFm5ld1Oi6Rqj1aJkKcOfJ5AAAAB8uuzaBfZxml2gxeKM790Oxy0dpCfzkooZhUYiNGhBRbYXN7D7rFmsPwMdHS/ANdARCsQsNwzpsRSoWEkpJSx6/Ihn1Y8XsFk3cS7VMdA3ckQGNatsBcjBNfLKqLpN4B+xUK6HFIW9nBT4NWbAJgb7DeeAjv8bLb/atbFmFxl0G3bNrj5X1X2Qiu66ulq3dmdAAAAAzmKeGRP3RROdtvRUyn/wu7VGuIdKhBip9fwZBjbSSh1dPkd5xFXdG+P8TxabIB2NOT5JKTPOPJZ/gmMHhdBxCA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -63,7 +63,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\carlo\Desktop\Guia3\recursos guia 3\Archivos de excel\CLIENTE PREFERENCIAL.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\carlo\Desktop\Guia3\recursos guia 3\Archivos de excel\CLIENTE PREFERENCIAL.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -180,7 +180,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\carlo\Desktop\Guia3\recursos guia 3\Archivos de excel\CLIENTE EJECUTIVO.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\carlo\Desktop\Guia3\recursos guia 3\Archivos de excel\CLIENTE EJECUTIVO.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -297,7 +297,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\carlo\Desktop\Guia3\recursos guia 3\Archivos de excel\CLIENTE TURISTA.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\carlo\Desktop\Guia3\recursos guia 3\Archivos de excel\CLIENTE TURISTA.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -414,7 +414,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\carlo\Desktop\Guia3\recursos guia 3\Archivos de excel\CLIENTE GUBERNAMENTAL.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\carlo\Desktop\Guia3\recursos guia 3\Archivos de excel\CLIENTE GUBERNAMENTAL.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -854,13 +854,7 @@
         <LinkedAzureSSISIR />
         <LinkedAzureStorage />
         <RemoteExecutionFolder />
-        <ParameterConfigurationValues>
-          <ConfigurationSetting>
-            <Id>LastModifiedTime</Id>
-            <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2020-08-12T20:44:07.6268344Z</Value>
-          </ConfigurationSetting>
-        </ParameterConfigurationValues>
+        <ParameterConfigurationValues />
       </Options>
     </Configuration>
   </Configurations>

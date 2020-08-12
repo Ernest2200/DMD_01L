@@ -1,22 +1,22 @@
 
-create database db_roaming_honduras
-GO
-USE db_roaming_honduras
+create database db_roaming_honduras;
+
+USE db_roaming_honduras;
 
 create table tipo_clientes
 (
-	idtipocliente integer not null primary key,
+	idtipocliente integer not null  primary key,
 	nombre_tipo   varchar(100) not null
 );
-GO
+
 insert into tipo_clientes values (1,'CLIENTE PREFERENCIAL');
 insert into tipo_clientes values (2,'CLIENTE EJECUTIVO');
 insert into tipo_clientes values (3,'CLIENTE TURISTA');
 insert into tipo_clientes values (4,'CLIENTE GUBERNAMENTAL');
-GO
+
 create table cliente 
 (
-	idcliente integer not null primary key,
+	idcliente integer not null  primary key,
 	idtipocliente integer not null,
 	codigo_cliente varchar(15) not null,
 	dui varchar(9) not null,
@@ -28,16 +28,16 @@ create table cliente
 	estado char(1) not null,
 	CONSTRAINT fk_cliente_reference_tipocliente FOREIGN KEY (idtipocliente) REFERENCES tipo_clientes(idtipocliente)
 );
-GO
+
 create table facturacion
 (
-	idfacturacion integer not null primary key,
+	idfacturacion integer not null AUTO_INCREMENT primary key,
 	idcliente integer not null,
 	monto_facturacion decimal(10,2) not null,
 	CONSTRAINT fk_facturacion_reference_clientes FOREIGN KEY (idcliente) REFERENCES cliente(idcliente)
 );
 
-GO
+
 insert into cliente values (1421,1,'sv-mn1421','014482905','02100107651014','MARROQUIN AREVALO','NESTOR MARIO','m','77407501','f');
 insert into facturacion (idcliente,monto_facturacion) values (1421,56);
 insert into cliente values (2164,1,'sv-mg2164','018045721','02102502640021','MAYORGA RAMIREZ','GABRIEL ANTONIO','m','70705723','t');
@@ -88,7 +88,7 @@ insert into cliente values (47658,3,'sv-em47658','003749849','06190301791017','E
 insert into facturacion (idcliente,monto_facturacion) values (47658,46.7);
 insert into cliente values (47671,3,'sv-rm47671','007381512','06143105701141','RIVERA MEDRANO','MANUEL ALFREDO','m','71895007','t');
 insert into facturacion (idcliente,monto_facturacion) values (47671,151.4);
-insert into cliente values (47715,3,'sv-hg47715','038162064','06142410871140','HERNANDEZ MEMBREÑO','GUSTAVO RAFAEL','m','71048822','t');
+insert into cliente values (47715,3,'sv-hg47715','038162064','06142410871140','HERNANDEZ MEMBREÃ‘O','GUSTAVO RAFAEL','m','71048822','t');
 insert into facturacion (idcliente,monto_facturacion) values (47715,181.5);
 insert into cliente values (47690,3,'sv-af47690','012967399','02100406610027','ALARCON SANDOVAL','FRANCISCO ANTONIO','m','78700337','t');
 insert into facturacion (idcliente,monto_facturacion) values (47690,32.4);
@@ -138,7 +138,7 @@ insert into cliente values (20831,2,'sv-rm20831','001962687','03151801650015','R
 insert into facturacion (idcliente,monto_facturacion) values (20831,24.6);
 insert into cliente values (6418,2,'sv-lc6418','014216956','06140310620031','LOPEZ GUZMAN','CESAR MAURICIO','m','63055568','t');
 insert into facturacion (idcliente,monto_facturacion) values (6418,43.3);
-insert into cliente values (9278,2,'sv-nm9278','000900886','06142712600140','NUÑEZ GRANADOS','MANUEL VICENTE','m','61317133','f');
+insert into cliente values (9278,2,'sv-nm9278','000900886','06142712600140','NUÃ‘EZ GRANADOS','MANUEL VICENTE','m','61317133','f');
 insert into facturacion (idcliente,monto_facturacion) values (9278,17.6);
 insert into cliente values (9858,4,'sv-pw9858','001083386','06172101640020','PALACIOS COLOCHO','WALTER MAURICIO','m','62272957','t');
 insert into facturacion (idcliente,monto_facturacion) values (9858,82.3);
@@ -186,7 +186,7 @@ insert into cliente values (47681,3,'sv-oj47681','023747142','14160802600014','O
 insert into facturacion (idcliente,monto_facturacion) values (47681,55.4);
 insert into cliente values (47691,1,'sv-ud47691','008095449','14030711551011','UMANZOR DE RIVERA','DOLORES SUYAPA','f','62257198','t');
 insert into facturacion (idcliente,monto_facturacion) values (47691,184.4);
-insert into cliente values (1054,1,'sv-sm1054','024082919','02030510681014','SALAZAR DE SERMEÑO','MARITZA CAROLINA','f','64478435','t');
+insert into cliente values (1054,1,'sv-sm1054','024082919','02030510681014','SALAZAR DE SERMEÃ‘O','MARITZA CAROLINA','f','64478435','t');
 insert into facturacion (idcliente,monto_facturacion) values (1054,166.8);
 insert into cliente values (47682,1,'sv-om47682','003565392','12172412781040','OLIVARES RUIZ','MARGARITA DE LA PAZ','f','66606154','t');
 insert into facturacion (idcliente,monto_facturacion) values (47682,130);
@@ -198,4 +198,3 @@ insert into cliente values (23670,1,'sv-mh23670','023137509','11142601701015','M
 insert into facturacion (idcliente,monto_facturacion) values (23670,20.9);
 insert into cliente values (47693,1,'sv-mm47693','003104594','07022402530010','MEJIA ','MANUEL ANTONIO','m','62357596','f');
 insert into facturacion (idcliente,monto_facturacion) values (47693,144.9);
-GO
