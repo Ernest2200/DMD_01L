@@ -1,0 +1,26 @@
+//PROBLEMA 1
+select top 100 edad,cast(avg(Promedio_visitas)as decimal (10,2)) as "promedio de visitas por edad" from Clientes
+group by edad
+order by "promedio de visitas por edad" desc
+
+select top 100 genero,cast(avg(Promedio_visitas)as decimal (10,2)) as "promedio de visitas por genero" from Clientes
+group by genero
+order by "promedio de visitas por genero" desc
+
+//PROBLEMA 2
+
+SELECT top 100 s.Nombre_sucursal,sum(c.Aurora) as "# personas aurora" ,sum(c.Carmesi) as "# personas Carmesi",sum(c.Claveles) as "# personas claveles",
+sum(c.girasoles) as "# personas girasoles",sum(c.globos) as "# personas globos",sum(c.hortensia) as "# personas hortensia",sum(c.Lirios)as "# personas Lirios",
+sum(c.Liston) as "# personas liston",sum(c.macetas) as "# personas macetas",sum(c.Orquideas) as "# personas orquideas",
+sum(c.Rosas) as "# personas rosas",sum(c.tierras) as "# personas tierras",sum(c.Tulipanes) as "# personas tulipanes",sum(c.tarjetas) as "# personas tarjetas"
+FROM Clientes as c
+INNER JOIN Sucursal as s
+ON c.ID_sucursal = s.Id_sucursal
+group by s.Nombre_sucursal
+
+
+SELECT top 100 sum(c.Aurora) as "# personas aurora" ,sum(c.Carmesi) as "# personas Carmesi",sum(c.Claveles) as "# personas claveles",
+sum(c.girasoles) as "# personas girasoles",sum(c.globos) as "# personas globos",sum(c.hortensia) as "# personas hortensia",sum(c.Lirios)as "# personas Lirios",
+sum(c.Liston) as "# personas liston",sum(c.macetas) as "# personas macetas",sum(c.Orquideas) as "# personas orquideas",
+sum(c.Rosas) as "# personas rosas",sum(c.tierras) as "# personas tierras",sum(c.Tulipanes) as "# personas tulipanes",sum(c.tarjetas) as "# personas tarjetas"
+FROM Clientes as c
