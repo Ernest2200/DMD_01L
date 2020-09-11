@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="8/29/2020 9:52:49 PM"
+  DTS:CreationDate="9/11/2020 9:50:18 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-OOEURSU"
   DTS:CreatorName="DESKTOP-OOEURSU\carlo"
-  DTS:DTSID="{2F0EA33A-6EBB-46FF-83E4-354118F1EF99}"
+  DTS:DTSID="{E5F0F438-1B50-45C7-A747-48605172FE76}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
   DTS:LocaleID="21514"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{F8C824B4-99B5-48A3-BACF-FAB3F521B33E}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{04F2E86A-A764-4022-ADBF-53C3845667C4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Guia4\bulkfiles\error_output\flat_file_error.txt">
+          DTS:ConnectionString="C:\bulkfiles\error_output\flat_file_error.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -37,7 +37,7 @@
               DTS:DataType="302"
               DTS:TextQualified="True"
               DTS:ObjectName="Flat File Source Error Output Column"
-              DTS:DTSID="{29C59D11-FDD8-4766-ABA0-7C444DE24B5A}"
+              DTS:DTSID="{3982B630-C8B2-460F-A6D9-170074B5DDBE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -45,7 +45,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{F8DB859B-F522-4171-AE6E-B4A30146F77C}"
+              DTS:DTSID="{853B343E-89EA-492B-B8DF-88A797883581}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -53,7 +53,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{6390A949-93CA-4DF5-AA98-C12453F0FF9F}"
+              DTS:DTSID="{8C1E9B6F-0D60-4F17-9293-6A67514A4C78}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -72,7 +72,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Guia4\bulkfiles\error_output\date_error.txt">
+          DTS:ConnectionString="C:\bulkfiles\error_output\date_error.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -81,7 +81,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Categoria"
-              DTS:DTSID="{B2BD7721-A586-4186-997A-46FCF236A542}"
+              DTS:DTSID="{D64672ED-DCF5-43A1-9114-8CC977B1823A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -90,7 +90,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Producto"
-              DTS:DTSID="{442ABE49-5AF3-48B6-BE77-555A056A6746}"
+              DTS:DTSID="{5BC4590D-BF83-466F-A542-DEC7DB5EB1BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -99,7 +99,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Marca"
-              DTS:DTSID="{B501F966-181A-4F1C-93A4-CA03976C49C9}"
+              DTS:DTSID="{7B212DD7-0C9E-4472-8934-98DAB3DAE201}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -107,7 +107,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Cantidad"
-              DTS:DTSID="{0C2D86FC-ECAD-4B46-87D3-6F41D0E3012F}"
+              DTS:DTSID="{57D34AE8-2409-401E-9ECC-43CB7F2C8D34}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -116,7 +116,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Unidad"
-              DTS:DTSID="{AEAF0B11-25DF-4D2C-9CE8-9FED14F7AECD}"
+              DTS:DTSID="{62FAB751-4366-4944-B729-10051E0F3E1B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -124,7 +124,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="Precio"
-              DTS:DTSID="{EAD6547F-69FC-4438-A3EC-DBDE0CC4BC5F}"
+              DTS:DTSID="{E6693049-C055-4619-A36A-8284A62B2133}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -133,7 +133,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Establecimiento"
-              DTS:DTSID="{EB952E3D-7653-490E-9CB6-D75F66852EF1}"
+              DTS:DTSID="{4E17A339-612C-491E-9F33-F607330656F2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -142,7 +142,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Direccion"
-              DTS:DTSID="{706B9729-26CE-437F-A8E3-7387D9F387BD}"
+              DTS:DTSID="{551C5DB1-1005-4A20-B4AD-195605ED4152}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -151,7 +151,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="De partamento"
-              DTS:DTSID="{F4CC07F3-5626-4801-AFC3-34F623CE7504}"
+              DTS:DTSID="{0EAEA5DD-660F-489A-ACE2-9CCC8F300AFA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -160,7 +160,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Municipio"
-              DTS:DTSID="{159D9417-7C8C-414E-A9D4-F69E40C97A85}"
+              DTS:DTSID="{EB6E9C5E-7986-4C1F-8362-5E12E9E4A357}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -169,7 +169,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Fecha Sondeo"
-              DTS:DTSID="{48668EFB-A30D-4566-876E-FBD4CDEE61DC}"
+              DTS:DTSID="{1624876F-8D77-48D8-98CB-00C3F074BAAB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -177,7 +177,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{970692C4-85C5-474E-AABC-E81E6FCF651B}"
+              DTS:DTSID="{22B34233-E690-4D4F-892B-971520E46314}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -185,7 +185,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{532BF3EF-F8A9-4F79-98A9-45F474616932}"
+              DTS:DTSID="{A64DA435-29F4-44B2-B28C-9DC261026E93}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -205,7 +205,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Guia4\bulkfiles\error_output\negative_price_error.txt">
+          DTS:ConnectionString="C:\bulkfiles\error_output\negative_price_error.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -214,7 +214,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Categoria"
-              DTS:DTSID="{82C530F5-5E24-4E34-AE18-F7476CD8CDA4}"
+              DTS:DTSID="{0631CA6C-48F4-40D3-ABFB-0F424B4596CF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -223,7 +223,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Producto"
-              DTS:DTSID="{49E0D56F-BDF8-4323-A2D1-1A82B12B382C}"
+              DTS:DTSID="{9B44B8F2-460C-482A-A344-05B6DDB924EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -232,7 +232,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Marca"
-              DTS:DTSID="{0021D664-4FEC-4DDC-B56D-7DAFDE189D16}"
+              DTS:DTSID="{7E34C147-9FD3-4C9D-9F0E-5138D89B149D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -240,7 +240,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Cantidad"
-              DTS:DTSID="{27C830E4-EA59-496D-BB68-397F4D25EAA5}"
+              DTS:DTSID="{902FA0BB-5611-4114-90A5-D677F0D95E53}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -249,7 +249,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Unidad"
-              DTS:DTSID="{4642BC7A-0618-4F32-91E4-E827E93D23FE}"
+              DTS:DTSID="{3D64B0EC-A4C0-4EB1-8BDF-30ADFA96CE47}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -257,7 +257,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="Precio"
-              DTS:DTSID="{50559011-913A-4E69-8D81-2FD9582436DA}"
+              DTS:DTSID="{A256AB11-0125-4279-9B64-209716E2617E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -266,7 +266,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Establecimiento"
-              DTS:DTSID="{5FCF36EC-9FD9-4F00-8613-7AB0A9596C3C}"
+              DTS:DTSID="{CC807F14-93A7-4149-B305-0E13519DD0ED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -275,7 +275,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Direccion"
-              DTS:DTSID="{4FD439EB-9B66-4CA9-9814-4910E1EDC3CE}"
+              DTS:DTSID="{4BE0831C-92F1-410A-B60E-DF663F273934}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -284,7 +284,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="De partamento"
-              DTS:DTSID="{EFF361E3-A9A1-4A40-A335-F6FF7E0CF645}"
+              DTS:DTSID="{D259F9DA-2AF9-456F-A0CB-7E99EF75FF5D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -293,7 +293,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Municipio"
-              DTS:DTSID="{02DA5C65-AEA5-4EF9-BEC9-18AA4898FAB3}"
+              DTS:DTSID="{3148688E-DBDB-4B30-98D2-9B8CEF71CA0B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -302,7 +302,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Fecha Sondeo"
-              DTS:DTSID="{53862254-81C5-484C-A9DC-570207FA13C8}"
+              DTS:DTSID="{631E2FA9-A100-4FCE-8682-8E16ECB9F00A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -310,7 +310,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="fecha_sondeo_fixed"
-              DTS:DTSID="{3845CDBB-7FE5-4E1D-A907-868D34616C54}"
+              DTS:DTSID="{37D93A02-4B2B-4F5B-BF99-266CAD08FA46}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -332,7 +332,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\carlo\Desktop\Guia4\bulkfiles">
+          DTS:ConnectionString="C:\bulkfiles">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -341,7 +341,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Categoria"
-              DTS:DTSID="{8469DB1E-9428-496C-91BB-C72538A902B8}"
+              DTS:DTSID="{99F1BC71-1E04-4B39-B2DA-195292063047}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -350,7 +350,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Producto"
-              DTS:DTSID="{F75E1168-37B5-4CF2-A1F0-503347D0B4A6}"
+              DTS:DTSID="{D5C8AB7A-10C0-415C-85B5-0D6EC866FBB7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -359,7 +359,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Marca"
-              DTS:DTSID="{126C26F8-9733-4175-813A-0B4C35E00F67}"
+              DTS:DTSID="{B86CE4D3-E680-456A-89BC-D35C2667486B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -367,7 +367,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Cantidad"
-              DTS:DTSID="{496C9AE1-A07A-4EC7-A765-1DD33060C93F}"
+              DTS:DTSID="{BDE02E1A-2CAA-4ECC-9700-63AAD42FC345}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -376,7 +376,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Unidad"
-              DTS:DTSID="{567AC33D-6C0C-491F-B77A-0D6E116FA2A5}"
+              DTS:DTSID="{04D12F7C-E400-408B-BAB7-4B05E761D474}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -384,7 +384,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="Precio"
-              DTS:DTSID="{0F522114-DA35-445C-9B55-3B4C35FE376C}"
+              DTS:DTSID="{896FC753-2EE2-4F29-85A9-86E60412CC8C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -393,7 +393,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Establecimiento"
-              DTS:DTSID="{810EE5C4-E366-46B4-BE75-6D070815E86E}"
+              DTS:DTSID="{0DFD69EE-C323-432C-8D58-F52186AC7434}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -402,7 +402,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Direccion"
-              DTS:DTSID="{45F04B97-B508-4A6C-B142-17B4F0BBA6FA}"
+              DTS:DTSID="{BE3732C7-F1A5-4D20-81AA-6D2B6A1FF30B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -411,7 +411,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="De partamento"
-              DTS:DTSID="{461A855E-9E62-4729-B5C8-C9C2039A96A6}"
+              DTS:DTSID="{E15C6AD6-5C56-4105-97AE-167C43F3DC80}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -420,7 +420,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Municipio"
-              DTS:DTSID="{17838C74-DA80-4A91-BBBD-271DB933B596}"
+              DTS:DTSID="{6501473A-BA8A-4649-A57A-125DCDDB4643}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -429,7 +429,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Fecha Sondeo"
-              DTS:DTSID="{DFFAAEF6-B5CD-4F12-B188-0BBD610CFC73}"
+              DTS:DTSID="{BDE3F73D-72BC-4483-ABAC-029DA9FA1598}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -449,12 +449,12 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{E724A0A2-893A-46DF-B637-D178641AD342}"
+      DTS:DTSID="{A011C96D-450F-4309-8C1F-7D133AC95EDD}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="bulkfiles">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\carlo\Desktop\Guia4\bulkfiles</DTS:VariableValue>
+        DTS:DataType="8">C:\bulkfiles</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -462,18 +462,18 @@
       DTS:refId="Package\Contenedor de bucles Foreach"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Contenedor de bucles Foreach"
-      DTS:DTSID="{061BCB58-C067-4C95-B8EA-193B78482A39}"
+      DTS:DTSID="{33ABA9A1-0877-4C55-920E-3AD1C66F3C27}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Contenedor de bucles Foreach">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{07470FBE-9727-4D14-8AB5-9B6BBA1F1DAE}"
-        DTS:ObjectName="{07470FBE-9727-4D14-8AB5-9B6BBA1F1DAE}">
+        DTS:DTSID="{AD7822C6-A84A-4727-B14A-3416DBC38C4B}"
+        DTS:ObjectName="{AD7822C6-A84A-4727-B14A-3416DBC38C4B}">
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Users\carlo\Desktop\Guia4\bulkfiles" />
+              Folder="C:\bulkfiles" />
             <FEFEProperty
               FileSpec="*.txt" />
             <FEFEProperty
@@ -489,7 +489,7 @@
           DTS:refId="Package\Contenedor de bucles Foreach\Data Flow Task"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{8B7B795C-F220-4F52-AB55-D3D65D354074}"
+          DTS:DTSID="{256034E8-458E-4519-916E-9DD96047AECE}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="Data Flow Task"
@@ -1829,8 +1829,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{C9796446-FBBE-4420-80FD-D86F5812FDCB}"
-          DTS:ObjectName="{C9796446-FBBE-4420-80FD-D86F5812FDCB}"
+          DTS:DTSID="{482526F2-B9B7-41CC-A797-7A424C7D7851}"
+          DTS:ObjectName="{482526F2-B9B7-41CC-A797-7A424C7D7851}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::bulkfiles" />
       </DTS:ForEachVariableMappings>
@@ -1851,14 +1851,14 @@
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Contenedor de bucles Foreach\Data Flow Task"
-          TopLeft="88.171434337266,87.8470613009378" />
+          TopLeft="106.428580393597,35.6941189554736" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="329.6,213.6"
-          Size="329.6,256.8"
+          PanelSize="342.4,158.4"
+          Size="342.4,201.6"
           Id="Package\Contenedor de bucles Foreach"
-          TopLeft="250.714289983925,45.8823535846592" />
+          TopLeft="16.4285717083485,27.5294121507955" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1870,38 +1870,38 @@
         <NodeLayout
           Size="176,41.6"
           Id="Package\Contenedor de bucles Foreach\Data Flow Task\negative_price_error"
-          TopLeft="397.714292282961,287.529415797197" />
+          TopLeft="462.71429236811,350.341180621052" />
         <NodeLayout
           Size="119.2,41.6"
           Id="Package\Contenedor de bucles Foreach\Data Flow Task\products"
-          TopLeft="77.4000012772424,337.800003828722" />
+          TopLeft="137.400001277242,397.552945080266" />
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\Contenedor de bucles Foreach\Data Flow Task\Data Conversion"
-          TopLeft="43.5714293134456,262.635296477084" />
+          TopLeft="103.571429313446,322.388237728628" />
         <NodeLayout
           Size="109.6,41.6"
           Id="Package\Contenedor de bucles Foreach\Data Flow Task\Origen"
-          TopLeft="157.25714460879,0.247058748456435" />
+          TopLeft="217.25714460879,60" />
         <NodeLayout
           Size="128,41.6"
           Id="Package\Contenedor de bucles Foreach\Data Flow Task\date_error"
-          TopLeft="497.8571513356,57.3529419808239" />
+          TopLeft="557.8571513356,117.105883232368" />
         <NodeLayout
           Size="141.6,41.6"
           Id="Package\Contenedor de bucles Foreach\Data Flow Task\flat_file_error"
-          TopLeft="2.8421709430404E-14,54.2941184085133" />
+          TopLeft="60,114.047059660057" />
         <NodeLayout
           Size="140.8,41.6"
           Id="Package\Contenedor de bucles Foreach\Data Flow Task\Conversiones"
-          TopLeft="137.257144268192,110.400001458561" />
+          TopLeft="197.257144268192,170.152942710105" />
         <NodeLayout
           Size="163.2,41.6"
           Id="Package\Contenedor de bucles Foreach\Data Flow Task\Valores_negativos"
-          TopLeft="155.82857315589,180.752943621705" />
+          TopLeft="215.82857315589,240.505884873249" />
         <EdgeLayout
           Id="Package\Contenedor de bucles Foreach\Data Flow Task.Paths[valores positivos]"
-          TopLeft="211.561906489223,222.352943621705">
+          TopLeft="271.561906489223,282.105884873249">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1937,54 +1937,54 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenedor de bucles Foreach\Data Flow Task.Paths[valores negativos]"
-          TopLeft="263.295239822556,222.352943621705">
+          TopLeft="323.295239822557,282.105884873249">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="222.419052460405,65.1764721754926"
+              EndConnector="227.419052545554,68.2352957478026"
               Start="0,0"
-              End="222.419052460405,57.6764721754926">
+              End="227.419052545554,60.7352957478026">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.4502576401514" />
+                    End="0,23.691605458817" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.4502576401514"
-                    Point2="0,26.4502576401514"
-                    Point3="4,26.4502576401514" />
+                    Point1="0,23.691605458817"
+                    Point2="0,27.691605458817"
+                    Point3="4,27.691605458817" />
                   <mssgle:LineSegment
-                    End="218.419052460405,26.4502576401514" />
+                    End="223.419052545554,27.691605458817" />
                   <mssgle:CubicBezierSegment
-                    Point1="218.419052460405,26.4502576401514"
-                    Point2="222.419052460405,26.4502576401514"
-                    Point3="222.419052460405,30.4502576401514" />
+                    Point1="223.419052545554,27.691605458817"
+                    Point2="227.419052545554,27.691605458817"
+                    Point3="227.419052545554,31.691605458817" />
                   <mssgle:LineSegment
-                    End="222.419052460405,57.6764721754926" />
+                    End="227.419052545554,60.7352957478026" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="72.0579441989525,31.4502576401514,78.3031640625,11.6630859375"
+              BoundingBox="74.557944241527,32.691605458817,78.3031640625,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenedor de bucles Foreach\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="209.857144438491,41.8470587484564">
+          TopLeft="269.857144438491,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,68.5529427101046"
+              EndConnector="0,68.552942710105"
               Start="0,0"
-              End="0,61.0529427101046">
+              End="0,61.052942710105">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.0529427101046" />
+                    End="0,61.052942710105" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1995,7 +1995,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenedor de bucles Foreach\Data Flow Task.Paths[Flat File Source Error Output]"
-          TopLeft="157.25714460879,21.0470587484564">
+          TopLeft="217.25714460879,80.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2025,7 +2025,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenedor de bucles Foreach\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="207.657144268192,152.000001458561">
+          TopLeft="267.657144268192,211.752942710105">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2059,13 +2059,13 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenedor de bucles Foreach\Data Flow Task.Paths[Derived Column Error Output]"
-          TopLeft="278.057144268192,131.200001458561">
+          TopLeft="338.057144268192,190.952942710105">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="219.800007067408,-53.0470594777371"
+              EndConnector="219.800007067408,-53.0470594777375"
               Start="0,0"
-              End="212.300007067408,-53.0470594777371">
+              End="212.300007067408,-53.0470594777375">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2076,13 +2076,13 @@
                     Point2="109.900003533704,0"
                     Point3="109.900003533704,-4" />
                   <mssgle:LineSegment
-                    End="109.900003533704,-49.0470594777371" />
+                    End="109.900003533704,-49.0470594777375" />
                   <mssgle:CubicBezierSegment
-                    Point1="109.900003533704,-49.0470594777371"
-                    Point2="109.900003533704,-53.0470594777371"
-                    Point3="113.900003533704,-53.0470594777371" />
+                    Point1="109.900003533704,-49.0470594777375"
+                    Point2="109.900003533704,-53.0470594777375"
+                    Point3="113.900003533704,-53.0470594777375" />
                   <mssgle:LineSegment
-                    End="212.300007067408,-53.0470594777371" />
+                    End="212.300007067408,-53.0470594777375" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2095,7 +2095,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenedor de bucles Foreach\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="121.171429313446,304.235296477084">
+          TopLeft="181.171429313446,363.988237728628">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2130,13 +2130,5 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contenedor de bucles Foreach\Data Flow Task\products">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
