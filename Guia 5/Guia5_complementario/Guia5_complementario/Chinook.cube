@@ -1,0 +1,169 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0bb50f61-4902-4847-9ea0-2e6773e913b9" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Chinook</ID>
+  <Name>Chinook</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="2edbba52-9694-45aa-b81a-b6cafa2630de">
+      <ID>Track</ID>
+      <Name>Track</Name>
+      <DimensionID>Track</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b7917832-829d-430a-aa79-cffab2b96890">
+          <AttributeID>Track Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7c66ccb3-343b-418b-871a-e887ef4c1de4">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="08b9b086-a3f7-4593-b60c-f011ffc35688">
+      <ID>Invoice</ID>
+      <Name>Invoice</Name>
+      <DimensionID>Invoice</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7ed849f8-366b-477f-930b-0a046409895d">
+          <AttributeID>Invoice Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b4400eb3-1a1e-4b88-ab62-516f8b6f9664">
+          <AttributeID>Customer Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="517297cc-8a63-4177-b228-42be495ff59b">
+          <AttributeID>Billing Address</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c12f2ca9-a9d4-4041-acb8-d784f2c75620">
+          <AttributeID>Billing City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3bbfb5e5-f5b7-40eb-9684-0a082136bbf5">
+          <AttributeID>Billing State</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0d81f5c6-7ea7-4c7f-b3ac-2c983eb633da">
+          <AttributeID>Billing Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="27234691-a16a-4394-8a90-bac54dc3fb2f">
+          <AttributeID>Billing Postal Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="367bd4e6-8636-4f6a-9e19-4cd0eddbf809">
+          <AttributeID>Total</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="0913b0da-1c8e-4c0f-9634-26aec14275a6">
+      <ID>Invoice Line</ID>
+      <Name>Invoice Line</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="4d115ef5-fd88-4a0a-9434-895c66dfb21f">
+          <ID>Unit Price</ID>
+          <Name>Unit Price</Name>
+          <Source dwd:design-time-name="bbe811e5-dcde-4e74-ab01-c9c4b0a1f57f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="92d74454-b02a-45c3-8f93-b3dd42e8f107">
+              <TableID>dbo_InvoiceLine</TableID>
+              <ColumnID>UnitPrice</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e12c6784-036b-4c9e-b581-5e6271784a2f">
+          <ID>Quantity</ID>
+          <Name>Quantity</Name>
+          <Source dwd:design-time-name="fde2cd84-2e96-4475-b0e1-7ea37f9111f2">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9fa938f6-81d1-46b4-bc58-c7a32f21751e">
+              <TableID>dbo_InvoiceLine</TableID>
+              <ColumnID>Quantity</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dd388515-8b37-465d-9da7-fbea04c5b98e">
+          <CubeDimensionID>Track</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="80ad2f80-c82c-450e-9742-b7bd665d74ed">
+              <AttributeID>Track Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="36aa2af7-cdfe-4df3-943a-5e34762ba45b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6925ace1-aa7d-498f-831a-9fe7b0008429">
+                    <TableID>dbo_InvoiceLine</TableID>
+                    <ColumnID>TrackId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="11e3c175-d755-4623-b0c6-0a5a48245267">
+          <CubeDimensionID>Invoice</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d32fb174-6370-4962-8b10-9667313ccd5a">
+              <AttributeID>Invoice Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3e3c8967-b8bd-4978-a5a5-e446d6d0496c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="afc72e12-14e9-4c99-9b7e-f1454df02f41">
+                    <TableID>dbo_InvoiceLine</TableID>
+                    <ColumnID>InvoiceId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="5af47134-4c20-4d82-bde4-f472dbac65dd">
+    <DataSourceViewID>Chinook</DataSourceViewID>
+  </Source>
+</Cube>
