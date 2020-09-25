@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Adventure Works DW2012</Id>
+            <Name>Adventure Works DW2012</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiYkbAxMSQEeIsjb0QtLJKAAAAAAuAAAAQQBkAHYAZQBuAHQAdQByAGUAIABXAG8AcgBrAHMAIABEAFcAMgAwADEAMgAAABBmAAAAAQAAIAAAAMlChl5iqrTdUdR5d+w8xdyA4sEZnJFBmD9/toPByZgYAAAAAA6AAAAAAgAAIAAAAMVyp9XYOHx6gYKGXU3DkOHHRcdPtKghKaqfGr+CTfiCEAAAAMwHnNpiw1w0rZaCfEBVLA1AAAAAhpsAtoqTcYEG2MWkxknRssRVpjwV06YhOWBhebx12oKJ7tTrSSi6GwTvS0NzbF09T/L3oN4nvPE/utxHAcrEog==</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Adventure Works DW2012</Id>
+            <Name>Adventure Works DW2012</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiYkbAxMSQEeIsjb0QtLJKAAAAAAuAAAAQQBkAHYAZQBuAHQAdQByAGUAIABXAG8AcgBrAHMAIABEAFcAMgAwADEAMgAAABBmAAAAAQAAIAAAAGJheu2Eyuam9pdb1Xn1YqWVuRSa4wTt4AlkQ6UpfrkdAAAAAA6AAAAAAgAAIAAAAKlJ/+SrBQTJvEBJFYrVe+zTSuwHpRyoHkcnHU8P+mQsEAAAAJIyf7UUjzHphiQcQi6VnzdAAAAA6aCgAi3QHDaf4bFPJmIr+RzNomgs4SIS6qcGanrd5BY02i3pDLwAv7FtzTJiSsdDVUEQ+ldBS8jDDPHdFYb/dA==</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>Proyecto_Cubo_RS181977_RM181976</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>
