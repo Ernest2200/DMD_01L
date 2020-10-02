@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Ejercicio2_Fase2", "Ejercicio2_Fase2\Ejercicio2_Fase2.dwproj", "{3ABC1AD6-324C-473A-995C-A93FBD9CAC7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3ABC1AD6-324C-473A-995C-A93FBD9CAC7D}.Development|Default.ActiveCfg = Development
+		{3ABC1AD6-324C-473A-995C-A93FBD9CAC7D}.Development|Default.Build.0 = Development
+		{3ABC1AD6-324C-473A-995C-A93FBD9CAC7D}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0EDAD95-FA1F-4534-B93F-6E92F1E26C5F}
+	EndGlobalSection
+EndGlobal
