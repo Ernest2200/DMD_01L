@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Fase2_Esquelas", "Fase2_Esquelas\Fase2_Esquelas.dwproj", "{5BF28CBF-063D-45AC-9597-EB06B1A1E141}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Informe_Esquela", "Informe_Esquela\Informe_Esquela.rptproj", "{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Development|Default = Development|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.Debug|Default.ActiveCfg = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.Debug|Default.Build.0 = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.Debug|Default.Deploy.0 = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.DebugLocal|Default.ActiveCfg = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.DebugLocal|Default.Build.0 = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.DebugLocal|Default.Deploy.0 = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.Development|Default.ActiveCfg = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.Development|Default.Build.0 = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.Development|Default.Deploy.0 = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.Release|Default.ActiveCfg = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.Release|Default.Build.0 = Development
+		{5BF28CBF-063D-45AC-9597-EB06B1A1E141}.Release|Default.Deploy.0 = Development
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.Debug|Default.ActiveCfg = Debug
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.Debug|Default.Build.0 = Debug
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.Debug|Default.Deploy.0 = Debug
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.DebugLocal|Default.Build.0 = DebugLocal
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.Development|Default.ActiveCfg = Debug
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.Development|Default.Build.0 = Debug
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.Development|Default.Deploy.0 = Debug
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.Release|Default.ActiveCfg = Release
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.Release|Default.Build.0 = Release
+		{86A60BAA-CD48-4A41-9E40-5DFE49245CCD}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61CA2F10-B334-40A0-BC0A-027841695D88}
+	EndGlobalSection
+EndGlobal
